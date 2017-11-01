@@ -19,6 +19,12 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.kaola.search.interface</groupId>
+            <artifactId>kaola-search-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- JSP相关 -->
         <dependency>
             <groupId>jstl</groupId>
@@ -97,6 +103,12 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
+        <dependency>
+            <groupId>fastdfs_client</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.25</version>
+        </dependency>
+
     </dependencies>
     <!-- 配置tomcat插件 -->
     <build>

@@ -41,6 +41,6 @@
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.kaola.dao"/>
+        <property name="basePackage" value="com.kaola.dao,com.kaola.search.mapper "/>
     </bean>
 </beans>

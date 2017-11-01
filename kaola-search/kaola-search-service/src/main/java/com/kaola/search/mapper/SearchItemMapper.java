@@ -1,4 +1,4 @@
-package com.kaola.search.service.mapper;
+package com.kaola.search.mapper;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Author:Zhoumc
- * Description:返回
+ * Description: EasyUI返回
  * DATA:11:29 2017/10/26
  */
 public class EasyUIDataGridResult  implements Serializable{

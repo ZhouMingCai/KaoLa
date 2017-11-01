@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * Author:Zhoumc
- * Description:${TODO}
+ * Description:EasyUITree
  * DATA:14:36 2017/10/26
  */
 public class EasyUITreeNode  implements Serializable{
