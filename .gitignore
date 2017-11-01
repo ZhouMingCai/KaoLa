@@ -1,0 +1,14 @@
+.settings
+.classpath
+logback
+logs
+target
+*.iml
+.project
+.setting
+*.class
+.DS_Store
+.idea
+*.log
+.mymetadata
+*:*
