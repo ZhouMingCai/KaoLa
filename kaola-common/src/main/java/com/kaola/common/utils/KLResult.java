@@ -1,5 +1,6 @@
 package com.kaola.common.utils;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -10,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * Description:${TODO}
  * DATA:16:33 2017/10/31
  */
-public class KLResult {
+public class KLResult  implements Serializable{
 
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
