@@ -1,6 +1,7 @@
 package com.kaola.service;
 
 import com.kaola.common.EasyUIDataGridResult;
+import com.kaola.common.utils.KLResult;
 import com.kaola.pojo.TbItem;
 
 /**
@@ -15,5 +16,6 @@ public interface ItemService {
     EasyUIDataGridResult  getItemList(int page,int rows);
 
 
+    KLResult addItem(TbItem item ,String desc);
 
 }
