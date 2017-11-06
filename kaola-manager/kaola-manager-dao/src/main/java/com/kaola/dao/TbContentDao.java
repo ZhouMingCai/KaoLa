@@ -1,6 +1,8 @@
 package com.kaola.dao;
 
 
+import java.util.List;
+
 import com.kaola.pojo.TbContent;
 
 public interface TbContentDao {
@@ -17,4 +19,6 @@ public interface TbContentDao {
     int updateByPrimaryKeyWithBLOBs(TbContent record);
 
     int updateByPrimaryKey(TbContent record);
+
+    List<TbContent> queryById(Long cid);
 }

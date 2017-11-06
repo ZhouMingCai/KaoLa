@@ -22,6 +22,12 @@
   <sql id="Blob_Column_List" >
     content
   </sql>
+
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    SELECT * FROM  tb_content
+    WHERE  category_id = #{cid,jdbcType=BIGINT}
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />

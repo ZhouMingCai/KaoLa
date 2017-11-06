@@ -23,15 +23,10 @@
     <mvc:annotation-driven/>
 
 
-
-
-
     <!-- 引用dubbo服务 -->
     <dubbo:application name="kaola-protal-web"/>
     <dubbo:registry protocol="zookeeper" address="116.196.122.90:2181"/>
-    <!--<dubbo:reference service="com.kaola.service.ItemService" id="itemService" />-->
-
-
+    <dubbo:reference interface="com.kaola.content.spi.ContentService" id="contentService" />
 
 
     <!-- 根据客户端的不同请求决定不同的view进行响应,如：/blog/1.json、/blog/1.xml -->

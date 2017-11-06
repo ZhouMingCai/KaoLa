@@ -1,49 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>kaola-parent</artifactId>
-        <groupId>com.kaola.parent</groupId>
+        <artifactId>kaola-content</artifactId>
+        <groupId>com.kaola.content</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../kaola-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kaola.parent</groupId>
-    <artifactId>kaola-portal-web</artifactId>
+    <groupId>com.kaola.content.service</groupId>
+    <artifactId>kaola-content-service</artifactId>
     <packaging>war</packaging>
 
 
 
     <dependencies>
         <dependency>
+            <groupId>com.kaola.manager</groupId>
+            <artifactId>kaola-manager-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.kaola.content.spi</groupId>
             <artifactId>kaola-content-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <!-- JSP相关 -->
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
         </dependency>
 
         <!-- Spring -->
@@ -75,8 +54,14 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-        <!-- dubbo相关 -->
+
+        <!--dubbo相关-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
@@ -99,25 +84,5 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
-        <dependency>
-            <groupId>fastdfs_client</groupId>
-            <artifactId>fastdfs_client</artifactId>
-            <version>1.25</version>
-        </dependency>
-
     </dependencies>
-    <!-- 配置tomcat插件 -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <configuration>
-                    <path>/</path>
-                    <port>8082</port>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

@@ -1,6 +1,8 @@
 package com.kaola.dao;
 
 
+import java.util.List;
+
 import com.kaola.pojo.TbContentCategory;
 
 public interface TbContentCategoryDao {
@@ -15,4 +17,6 @@ public interface TbContentCategoryDao {
     int updateByPrimaryKeySelective(TbContentCategory record);
 
     int updateByPrimaryKey(TbContentCategory record);
+
+    List<TbContentCategory> queryById(Long parentId);
 }

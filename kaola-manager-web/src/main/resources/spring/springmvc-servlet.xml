@@ -33,6 +33,7 @@
     <dubbo:registry protocol="zookeeper" address="116.196.122.90:2181"/>
     <dubbo:reference interface="com.kaola.service.ItemService" id="itemService" />
     <dubbo:reference interface="com.kaola.service.ItemCatService" id="itemCatService" />
+    <dubbo:reference interface="com.kaola.content.spi.ContentCategoryService" id="contentCategoryService" />
     <dubbo:reference interface="com.kaola.search.service.SearchItemService" id="searchItemService" />
 
 
