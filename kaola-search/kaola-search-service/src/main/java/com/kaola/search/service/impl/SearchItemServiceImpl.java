@@ -14,7 +14,7 @@ import com.kaola.search.service.SearchItemService;
 
 /**
  * Author:Zhoumc
- * Description:
+ * Description: 索引库维护
  * DATA:16:40 2017/10/31
  */
 @Service
@@ -28,7 +28,7 @@ public class SearchItemServiceImpl  implements SearchItemService {
     private SolrServer solrServer;
 
     @Override
-    public KLResult getAllSearchItems() {
+    public KLResult importAllSearchItems() {
         try {
             List<SearchItem> itemList = searchItemMapper.getSearchItemList();
             for (SearchItem searchItem : itemList){
@@ -47,9 +47,7 @@ public class SearchItemServiceImpl  implements SearchItemService {
             return KLResult.ok();
         }catch (Exception e){
             e.printStackTrace();
-            KLResult.build(500,e.getMessage());
+           return KLResult.build(500,e.getMessage());
         }
-
-        return null;
     }
 }

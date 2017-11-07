@@ -27,9 +27,8 @@ public class PictureController {
     @RequestMapping(value="/pic/upload", produces= MediaType.TEXT_PLAIN_VALUE+";charset=utf-8")
     @ResponseBody
     public String uploadFile(MultipartFile uploadFile) {
-
         try {
-            //把图片上传到图片服务器
+            //把图片上传的图片服务器
             FastDFSClient fastDFSClient = new FastDFSClient("classpath:conf/client.conf");
             //取文件扩展名
             String originalFilename = uploadFile.getOriginalFilename();

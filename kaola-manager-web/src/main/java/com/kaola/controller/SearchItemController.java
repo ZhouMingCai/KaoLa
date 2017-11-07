@@ -22,7 +22,7 @@ public class SearchItemController {
     @RequestMapping("/index/item/import")
     @ResponseBody
     public KLResult importSearchItemList(){
-        KLResult klResult = searchItemService.getAllSearchItems();
+        KLResult klResult = searchItemService.importAllSearchItems();
         return klResult;
     }
 

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.kaola.common.EasyUITreeNode;
 import com.kaola.common.utils.KLResult;
-import com.kaola.content.spi.ContentCategoryService;
+import com.kaola.content.service.ContentCategoryService;
 import com.kaola.dao.TbContentCategoryDao;
 import com.kaola.pojo.TbContentCategory;
 

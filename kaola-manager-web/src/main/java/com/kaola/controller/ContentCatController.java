@@ -11,21 +11,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kaola.common.EasyUITreeNode;
 import com.kaola.common.utils.KLResult;
-import com.kaola.content.spi.ContentCategoryService;
+import com.kaola.content.service.ContentCategoryService;
 
 /**
  * Author:Zhoumc
  * Description:内容分类管理
  * DATA:10:27 2017/11/6
  */
-
-@Controller("/content")
+@Controller
 public class ContentCatController {
 
     @Autowired
     private ContentCategoryService categoryService;
 
-    @RequestMapping("/category/list")
+    @RequestMapping("/content/category/list")
     @ResponseBody
     public List<EasyUITreeNode> getContentList(@RequestParam(name = "id",defaultValue = "0")Long parentId){
         List<EasyUITreeNode> nodeList = categoryService.getContentCatList(parentId);
@@ -33,7 +32,7 @@ public class ContentCatController {
     }
 
 
-    @RequestMapping(value = "/category/create", method = RequestMethod.POST)
+    @RequestMapping(value="/content/category/create", method=RequestMethod.POST)
     @ResponseBody
     public KLResult createContentCategory(Long parentId , String name){
         KLResult result = categoryService.addContentCategory(parentId,name);

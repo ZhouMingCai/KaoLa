@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.kaola.content.spi.ContentService;
+import com.kaola.content.service.ContentService;
 import com.kaola.pojo.TbContent;
 
 /**

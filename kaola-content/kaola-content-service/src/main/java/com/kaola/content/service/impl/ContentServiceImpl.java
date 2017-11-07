@@ -6,11 +6,12 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.kaola.common.jedis.JedisClient;
 import com.kaola.common.utils.JsonUtils;
 import com.kaola.common.utils.KLResult;
-import com.kaola.content.spi.ContentService;
+import com.kaola.content.service.ContentService;
 import com.kaola.dao.TbContentDao;
 import com.kaola.pojo.TbContent;
 
@@ -19,6 +20,7 @@ import com.kaola.pojo.TbContent;
  * Description:内容管理
  * DATA:10:45 2017/11/6
  */
+@Service
 public class ContentServiceImpl implements ContentService {
 
     @Autowired

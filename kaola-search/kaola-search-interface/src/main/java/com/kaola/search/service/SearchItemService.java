@@ -9,6 +9,6 @@ import com.kaola.common.utils.KLResult;
  */
 public interface SearchItemService {
 
-    KLResult getAllSearchItems();
+    KLResult importAllSearchItems();
 
 }

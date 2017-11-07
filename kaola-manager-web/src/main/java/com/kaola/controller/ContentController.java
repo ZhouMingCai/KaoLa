@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kaola.common.utils.KLResult;
-import com.kaola.content.spi.ContentService;
+import com.kaola.content.service.ContentService;
 import com.kaola.pojo.TbContent;
 
 /**
