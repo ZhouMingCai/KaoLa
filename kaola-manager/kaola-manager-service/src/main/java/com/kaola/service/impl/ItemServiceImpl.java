@@ -3,12 +3,22 @@ package com.kaola.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kaola.common.EasyUIDataGridResult;
+import com.kaola.common.jedis.JedisClient;
 import com.kaola.common.utils.IDUtils;
 import com.kaola.common.utils.KLResult;
 import com.kaola.dao.TbItemDao;
@@ -31,8 +41,29 @@ public class ItemServiceImpl  implements ItemService{
     @Autowired
     private TbItemDescDao tbItemDescDao;
 
+    @Autowired
+    private TbItemDescDao itemDescDao;
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    @Resource
+    private Destination topicDestination;
+
+    @Autowired
+    private JedisClient jedisClient;
+
     @Override
     public TbItem getItemById(long itemId) {
+        //查询缓存
+        try {
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        //缓存中没有，查询数据库
+
         return tbItemDao.selectByPrimaryKey(itemId);
     }
 
@@ -53,7 +84,7 @@ public class ItemServiceImpl  implements ItemService{
     public KLResult addItem(TbItem item, String desc) {
 
         //生成商品id
-        long itemId = IDUtils.genItemId();
+        final long itemId = IDUtils.genItemId();
         //补全商品item属性
         item.setId(itemId);
         //1 ：正常
@@ -70,6 +101,19 @@ public class ItemServiceImpl  implements ItemService{
         itemDesc.setUpdated(new Date());
         tbItemDescDao.insert(itemDesc);
 
+        jmsTemplate.send(topicDestination, new MessageCreator() {
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                TextMessage textMessage = session.createTextMessage(itemId + "");
+                return textMessage;
+            }
+        });
         return KLResult.ok();
+    }
+
+    @Override
+    public TbItemDesc getItemDescById(long itemId) {
+        TbItemDesc tbItemDesc = itemDescDao.selectByPrimaryKey(itemId);
+        return tbItemDesc;
     }
 }

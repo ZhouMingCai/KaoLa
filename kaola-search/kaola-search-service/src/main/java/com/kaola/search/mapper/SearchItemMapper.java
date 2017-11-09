@@ -12,4 +12,6 @@ import com.kaola.common.pojo.SearchItem;
 public interface SearchItemMapper {
 
     List<SearchItem> getSearchItemList();
+
+    SearchItem getItemById(long itemId);
 }
