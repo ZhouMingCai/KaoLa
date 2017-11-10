@@ -18,6 +18,10 @@
     id, title, sell_point, price, num, barcode, image, cid, status, created, updated
   </sql>
 
+  <select id="queryByItemId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+      SELECT * from tb_item WHERE id = #{itemId}
+  </select>
+
   <select id="SelectBy" resultMap="BaseResultMap" >
     SELECT * FROM  tb_item
   </select>

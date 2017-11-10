@@ -1,4 +1,4 @@
-package com.kaola.item;
+package kaola.sso.web;
 
 /**
  * Hello world!

@@ -22,9 +22,15 @@
 
     <mvc:annotation-driven/>
 
+    <!--配置Freemarker-->
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/ftl/" />
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
 
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="kaola-protal-web"/>
+    <dubbo:application name="kaola-item-web"/>
     <dubbo:registry protocol="zookeeper" address="116.196.122.90:2181"/>
     <dubbo:reference interface="com.kaola.service.ItemService" id="itemService" />
 

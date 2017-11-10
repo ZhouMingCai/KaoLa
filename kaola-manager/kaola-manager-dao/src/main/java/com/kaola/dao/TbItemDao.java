@@ -19,4 +19,6 @@ public interface TbItemDao {
     int updateByPrimaryKey(TbItem record);
 
     List<TbItem> SelectBy();
+
+    List<TbItem> queryByItemId(Long itemId);
 }
