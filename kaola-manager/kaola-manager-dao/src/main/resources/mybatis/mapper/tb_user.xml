@@ -13,6 +13,34 @@
   <sql id="Base_Column_List" >
     id, username, password, phone, email, created, updated
   </sql>
+  
+  <select id="queryByUser" parameterType="java.lang.String" resultType="BaseResultMap">
+    SELECT * FROM  tb_user
+    <where>
+      <if test="userName != null and userName != '' ">
+        username = #{userName}
+      </if>
+      <if test="userPhone != null and userPhone != '' ">
+        userPhone = #{userPhone}
+      </if>
+      <if test="userEmail != null and userEmail != '' ">
+        userEmail = #{userEmail}
+      </if>
+    </where>
+  </select>
+
+  <select id="queryUser" resultType="BaseResultMap" parameterType="java.lang.String">
+     SELECT * FROM  tb_user
+    <where>
+      <if test="userName != null and userName != '' ">
+        username = #{userName}
+      </if>
+      <if test="password != null and password != '' ">
+        userPhone = #{password}
+      </if>
+    </where>
+  </select>
+  
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
