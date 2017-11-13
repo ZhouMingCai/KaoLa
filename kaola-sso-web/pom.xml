@@ -103,6 +103,11 @@
             <artifactId>fastdfs_client</artifactId>
             <version>1.25</version>
         </dependency>
+        <dependency>
+            <groupId>com.kaola.sso.service</groupId>
+            <artifactId>kaola-sso-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
     <!-- 配置tomcat插件 -->

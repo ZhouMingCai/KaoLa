@@ -27,6 +27,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+
     <servlet>
         <servlet-name>kaola-cart-web</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -40,5 +41,9 @@
         <servlet-name>kaola-cart-web</servlet-name>
         <!--伪静态化-->
         <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kaola-cart-web</servlet-name>
+        <url-pattern>*.action</url-pattern>
     </servlet-mapping>
 </web-app>
