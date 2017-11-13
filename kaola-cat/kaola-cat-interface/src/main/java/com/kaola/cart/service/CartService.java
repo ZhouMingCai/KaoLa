@@ -17,4 +17,5 @@ public interface CartService {
     List<TbItem> getCartList(long userId);
     KLResult updateCartNum(long userId, long itemId, int num);
     KLResult deleteCartItem(long userId, long itemId);
+    KLResult clearCartItem(long userId);
 }
