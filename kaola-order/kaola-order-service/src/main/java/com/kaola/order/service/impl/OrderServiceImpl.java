@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.kaola.common.jedis.JedisClient;
 import com.kaola.common.utils.KLResult;
@@ -21,6 +22,7 @@ import com.kaola.pojo.TbOrderShipping;
  * Description:${TODO}
  * DATA:16:39 2017/11/13
  */
+@Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
     private TbOrderDao orderDao;

@@ -19,7 +19,6 @@
           <div><a name="sfbest_hp_hp_head_home2" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></div>
           <div><a name="sfbest_hp_hp_head_home4" class="trackref" href="http://home.e3mall.cn/my/points/" rel="nofollow">我的积分</a></div>
           <div><a name="sfbest_hp_hp_head_home3" class="trackref" href="http://home.e3mall.cn/favorites/index/" rel="nofollow">我的收藏</a></div>
-          <!-- <div><a href="http://home.e3mall.cn/my/balance/" rel="nofollow">账户余额</a></div> -->
           <div><a href="http://home.e3mall.cn/giftcard/list/" rel="nofollow">我的优选卡</a></div>
           <div><a href="http://home.e3mall.cn/usercoupon/list/" rel="nofollow">我的优惠券</a></div>
         </div>
@@ -31,7 +30,7 @@
             <i></i>
             <div class="client-txt">
               <em>扫描我，即可下载</em>
-              <strong>宜立方商城客户端</strong>
+              <strong>考拉商城客户端</strong>
             </div>
           </div>
           <div class="app-btn">
@@ -91,7 +90,7 @@
       <li class="d3 tShow"><a name="sfbest_hp_hp_head_weibo" class="trackref" title="关注宜立方商城微博" href="http://weibo.com/sfbest" rel="nofollow" target="_blank"><q></q></a></li>
       <li class="d4 tShow"><q></q><!--微信-->
          <div class="dd">
-         <div class="sf_wx_t">关注宜立方商城微信</div>
+         <div class="sf_wx_t">关注考拉商城微信</div>
          <div class="sf_wx"></div>
         </div>
         <div class="corner">

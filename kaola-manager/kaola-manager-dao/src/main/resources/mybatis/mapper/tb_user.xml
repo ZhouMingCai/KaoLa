@@ -14,7 +14,7 @@
     id, username, password, phone, email, created, updated
   </sql>
   
-  <select id="queryByUser" parameterType="java.lang.String" resultType="BaseResultMap">
+  <select id="queryByUser" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT * FROM  tb_user
     <where>
       <if test="userName != null and userName != '' ">
@@ -29,7 +29,7 @@
     </where>
   </select>
 
-  <select id="queryUser" resultType="BaseResultMap" parameterType="java.lang.String">
+  <select id="queryUser" resultMap="BaseResultMap" parameterType="java.lang.String">
      SELECT * FROM  tb_user
     <where>
       <if test="userName != null and userName != '' ">
